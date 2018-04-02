@@ -48,6 +48,7 @@
         <directory>src/main/webapp</directory>
       </testResource>
     </testResources>
+
     <extensions>
       <extension>
         <groupId>kr.motd.maven</groupId>
@@ -60,6 +61,7 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>2.0.0.RELEASE</version>
         <executions>
           <execution>
             <goals>
@@ -132,6 +134,16 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
+
+      <!-- https://mvnrepository.com/artifact/com.google.protobuf/protoc -->
+      <dependency>
+          <groupId>com.google.protobuf</groupId>
+          <artifactId>protoc</artifactId>
+          <version>3.1.0</version>
+          <type>pom</type>
+      </dependency>
+
+
     </dependencies>
   </dependencyManagement>
 
@@ -191,12 +203,6 @@
     </dependency>
 
     <!-- testing -->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-test</artifactId>
-      <scope>test</scope>
-    </dependency>
-
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>

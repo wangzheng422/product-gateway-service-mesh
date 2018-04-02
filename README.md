@@ -1,3 +1,8 @@
+## updated by wangzheng422
+
+* bug fix for pom.xml
+* IDE setting, refer: https://github.com/trustin/os-maven-plugin#issues-with-eclipse-m2e-or-other-ides ,  "java.jdt.ls.vmargs": "-Dos.detected.name=osx -Dos.detected.arch=x86_64 -Dos.detected.classifier=osx-x86_64",
+
 ## Overview
 
 This project is used to demonstrate Istio and Linkerd service meshes with GRPC and Spring Boot services.

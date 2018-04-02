@@ -57,6 +57,8 @@
       </extension>
     </extensions>
 
+
+
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>
@@ -124,20 +126,32 @@
     </plugins>
   </build>
 
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-dependencies</artifactId>
-        <version>${spring-boot.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
+    <dependencyManagement>
+      <dependencies>
+        <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-dependencies</artifactId>
+          <version>${spring-boot.version}</version>
+          <type>pom</type>
+          <scope>import</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.google.protobuf/protoc -->
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protoc</artifactId>
+            <version>3.1.0</version>
+            <type>pom</type>
+        </dependency>
+
     </dependencies>
+
   </dependencyManagement>
 
 
-  <dependencies>
+<dependencies>
+
+
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-actuator</artifactId>
@@ -221,4 +235,6 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+
 </project>
