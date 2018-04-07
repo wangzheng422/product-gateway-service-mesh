@@ -108,7 +108,7 @@
               <goal>build</goal>
             </goals>
             <configuration>
-              <imageName>docker/inventory</imageName>
+              <imageName>${docker.image.prefix}/prd-gw-inventory</imageName>
               <dockerDirectory>${project.build.directory}/docker</dockerDirectory>
               <resources>
                 <resource>

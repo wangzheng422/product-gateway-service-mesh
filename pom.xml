@@ -8,6 +8,10 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
+  <properties>
+        <docker.image.prefix>10.11.0.6:5000</docker.image.prefix>
+    </properties>
+
   <description>Product Gateway Service Mesh</description>
   <modules>
    <module>baseproduct</module>

@@ -109,7 +109,7 @@
               <goal>build</goal>
             </goals>
             <configuration>
-              <imageName>docker/baseproduct</imageName>
+              <imageName>${docker.image.prefix}/prd-gw-baseproduct</imageName>
               <dockerDirectory>${project.build.directory}/docker</dockerDirectory>
               <resources>
                 <resource>

@@ -108,7 +108,7 @@
               <goal>build</goal>
             </goals>
             <configuration>
-              <imageName>docker/product-gateway</imageName>
+              <imageName>${docker.image.prefix}/prd-gw-product-gateway</imageName>
               <dockerDirectory>${project.build.directory}/docker</dockerDirectory>
               <resources>
                 <resource>

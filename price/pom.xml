@@ -108,7 +108,7 @@
               <goal>build</goal>
             </goals>
             <configuration>
-              <imageName>docker/price</imageName>
+              <imageName>${docker.image.prefix}/prd-gw-price</imageName>
               <dockerDirectory>${project.build.directory}/docker</dockerDirectory>
               <resources>
                 <resource>

@@ -111,7 +111,7 @@
               <goal>build</goal>
             </goals>
             <configuration>
-              <imageName>docker/reviews</imageName>
+              <imageName>${docker.image.prefix}/prd-gw-reviews</imageName>
               <dockerDirectory>${project.build.directory}/docker</dockerDirectory>
               <resources>
                 <resource>
