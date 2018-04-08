@@ -8,9 +8,11 @@ spec:
   ports:
   - port: 3000
     protocol: TCP
+    nodePort: 60300
     name: http
   selector:
     app: grafana
+  type: NodePort
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
