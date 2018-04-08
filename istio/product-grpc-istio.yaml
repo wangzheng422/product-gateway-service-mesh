@@ -42,7 +42,7 @@ spec:
       containers:
       - name: baseproduct
         image: 10.11.0.6:5000/prd-gw-baseproduct
-        imagePullPolicy: Never
+        imagePullPolicy: Always
         ports:
         - containerPort: 6565
 ---
@@ -79,7 +79,7 @@ spec:
       containers:
       - name: inventory
         image: 10.11.0.6:5000/prd-gw-inventory
-        imagePullPolicy: Never
+        imagePullPolicy: Always
         ports:
         - containerPort: 6566
 ---
@@ -114,7 +114,7 @@ spec:
       containers:
       - name: price
         image: 10.11.0.6:5000/prd-gw-price
-        imagePullPolicy: Never
+        imagePullPolicy: Always
         ports:
         - containerPort: 6567
 ---
@@ -149,7 +149,7 @@ spec:
       containers:
       - name: reviews
         image: 10.11.0.6:5000/prd-gw-reviews
-        imagePullPolicy: Never
+        imagePullPolicy: Always
         ports:
         - containerPort: 6568
 ---
@@ -184,7 +184,7 @@ spec:
       containers:
       - name: product-gateway
         image: 10.11.0.6:5000/prd-gw-product-gateway
-        imagePullPolicy: Never
+        imagePullPolicy: Always
         env:
         - name: BASEPRODUCT_SERVICE_HOST
           value: baseproduct
