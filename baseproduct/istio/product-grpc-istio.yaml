@@ -41,7 +41,7 @@ spec:
     spec:
       containers:
       - name: baseproduct
-        image: 10.11.0.6:5000/prd-gw-baseproduct
+        image: docker/baseproduct
         imagePullPolicy: Never
         ports:
         - containerPort: 6565
@@ -78,7 +78,7 @@ spec:
     spec:
       containers:
       - name: inventory
-        image: 10.11.0.6:5000/prd-gw-inventory
+        image: docker/inventory
         imagePullPolicy: Never
         ports:
         - containerPort: 6566
@@ -113,7 +113,7 @@ spec:
     spec:
       containers:
       - name: price
-        image: 10.11.0.6:5000/prd-gw-price
+        image: docker/price
         imagePullPolicy: Never
         ports:
         - containerPort: 6567
@@ -148,7 +148,7 @@ spec:
     spec:
       containers:
       - name: reviews
-        image: 10.11.0.6:5000/prd-gw-reviews
+        image: docker/reviews
         imagePullPolicy: Never
         ports:
         - containerPort: 6568
@@ -183,7 +183,7 @@ spec:
     spec:
       containers:
       - name: product-gateway
-        image: 10.11.0.6:5000/prd-gw-product-gateway
+        image: docker/product-gateway
         imagePullPolicy: Never
         env:
         - name: BASEPRODUCT_SERVICE_HOST
@@ -200,22 +200,22 @@ spec:
 ###########################################################################
 # Ingress resource (gateway)
 ##########################################################################
-# apiVersion: extensions/v1beta1
-# kind: Ingress
-# metadata:
-#   name: gateway
-#   annotations:
-#     kubernetes.io/ingress.class: "istio"
-# spec:
-#   rules:
-#   - http:
-#       paths:
-#       - path: /productInventory/.*
-#         backend:
-#           serviceName: inventory
-#           servicePort: 9091
-#       - path: /product/.*
-#         backend:
-#           serviceName: product-gateway
-#           servicePort: 9999
-# ---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: gateway
+  annotations:
+    kubernetes.io/ingress.class: "istio"
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /productInventory/.*
+        backend:
+          serviceName: inventory
+          servicePort: 9091
+      - path: /product/.*
+        backend:
+          serviceName: product-gateway
+          servicePort: 9999
+---

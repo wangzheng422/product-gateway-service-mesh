@@ -1,0 +1,42 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: nginx-istio
+  namespace: alauda01
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        service.alauda.io/name: nginx-istio
+    spec:
+      affinity: {}
+      containers:
+      - image: 10.11.0.6:5000/nginx:istio-pro-gw
+        imagePullPolicy: Always
+        name: nginx-istio-0
+        resources:
+          requests:
+            cpu: "1"
+            memory: 1G
+---
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    loadbalancer.alauda.io/bind: '[{"container_port":80,"protocol":"tcp","name":"nginx-10-11-0-6","port":10080}]'
+  labels:
+    service.alauda.io/name: nginx-istio
+  name: nginx-istio-0
+  namespace: alauda01
+spec:
+  ports:
+  - name: tcp-0
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    service.alauda.io/name: nginx-istio
