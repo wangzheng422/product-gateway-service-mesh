@@ -52,6 +52,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    loadbalancer.alauda.io/bind: '[{"container_port":9091,"protocol":"tcp","name":"nginx-10-11-0-6","port":9091}]'
   name: inventory
   labels:
     app: inventory
@@ -159,6 +161,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    loadbalancer.alauda.io/bind: '[{"container_port":9999,"protocol":"tcp","name":"nginx-10-11-0-6","port":9999}]'
   name: product-gateway
   labels:
     app: product-gateway
