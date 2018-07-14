@@ -37,6 +37,7 @@ istioctl kube-inject -f product-grpc-istio.yaml > 1.yaml
 
 http://10.11.0.6:9999/product/9310301.html#
 
+!(https://github.com/wangzheng422/product-gateway-service-mesh/raw/master/docs/image2018-4-8%2021_6_37.png)
 
 调用链跟踪
 
