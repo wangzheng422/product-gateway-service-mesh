@@ -35,38 +35,35 @@ istioctl kube-inject -f product-grpc-istio.yaml > 1.yaml
 
 应用页面
 
-http://10.11.0.6:9999/product/9310301.html#
+<http://10.11.0.6:9999/product/9310301.html#>
 
-![](https://github.com/wangzheng422/product-gateway-service-mesh/raw/master/docs/image2018-4-8%2021_6_37.png)
+![Alternate text](https://github.com/wangzheng422/product-gateway-service-mesh/raw/master/docs/image2018-4-8%2021_6_37.png)
 
 调用链跟踪
 
-http://10.11.0.7:61080/ （由于使用nodeport暴露的服务，使用集群中任意一个slave地址）
+<http://10.11.0.7:61080/> （由于使用nodeport暴露的服务，使用集群中任意一个slave地址）
 
-![](https://github.com/wangzheng422/product-gateway-service-mesh/raw/master/docs/image2018-4-8%2021_7_45.png)
+![Alternate text](https://github.com/wangzheng422/product-gateway-service-mesh/raw/master/docs/image2018-4-8%2021_7_45.png)
 
-![](https://github.com/wangzheng422/product-gateway-service-mesh/raw/master/docs/image2018-4-12%200_1_56.png)
+![Alternate text](https://github.com/wangzheng422/product-gateway-service-mesh/raw/master/docs/image2018-4-12%200_1_56.png)
 
-![](https://github.com/wangzheng422/product-gateway-service-mesh/raw/master/docs/image2018-4-8%2021_8_25.png)
+![Alternate text](https://github.com/wangzheng422/product-gateway-service-mesh/raw/master/docs/image2018-4-8%2021_8_25.png)
 
 istio dashboard
 
-http://10.11.0.7:60300/dashboard/db/istio-dashboard  （由于使用nodeport暴露的服务，使用集群中任意一个slave地址 ）
+<http://10.11.0.7:60300/dashboard/db/istio-dashboard>  （由于使用nodeport暴露的服务，使用集群中任意一个slave地址 ）
 
-![](https://github.com/wangzheng422/product-gateway-service-mesh/raw/master/docs/image2018-4-8%2021_10_26.png)
+![Alternate text](https://github.com/wangzheng422/product-gateway-service-mesh/raw/master/docs/image2018-4-8%2021_10_26.png)
 
-![](https://github.com/wangzheng422/product-gateway-service-mesh/raw/master/docs/image2018-4-8%2021_10_50.png)
+![Alternate text](https://github.com/wangzheng422/product-gateway-service-mesh/raw/master/docs/image2018-4-8%2021_10_50.png)
 
-![](https://github.com/wangzheng422/product-gateway-service-mesh/raw/master/docs/image2018-4-12%200_4_12.png)
-
+![Alternate text](https://github.com/wangzheng422/product-gateway-service-mesh/raw/master/docs/image2018-4-12%200_4_12.png)
 
 调用关系图
 
-http://10.11.0.8:60088/dotviz （由于使用nodeport暴露的服务，使用集群中任意一个slave地址 ）
+<http://10.11.0.8:60088/dotviz> （由于使用nodeport暴露的服务，使用集群中任意一个slave地址 ）
 
-![](https://github.com/wangzheng422/product-gateway-service-mesh/raw/master/docs/image2018-4-8%2021_8_52.png)
-
-
+![Alternate text](https://github.com/wangzheng422/product-gateway-service-mesh/raw/master/docs/image2018-4-8%2021_8_52.png)
 
 ## Overview
 
