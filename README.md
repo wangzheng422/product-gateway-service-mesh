@@ -1,3 +1,5 @@
+# changes
+
 ## updated by wangzheng422
 
 * bug fix for pom.xml
@@ -96,9 +98,11 @@ https://sleeplessinslc.blogspot.com/2017/09/service-mesh-examples-of-istio-and.h
 
 You can run this project by importing into Eclipse and starting the individual services. The below will create Docker images as well.
 Building Maven project:
+
 ```bash
 mvn clean install
 ```
+
 # Running in Kubernetes
 
 Follow the instructions at https://sleeplessinslc.blogspot.com/2017/09/service-mesh-examples-of-istio-and.html for more details
